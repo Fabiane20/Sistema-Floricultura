@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floricultura Divina Planta</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<!-- End Example Code -->
+<footer>
+    <div class="links">
+        <a href="index.html">Divina Planta</a>
+
+    </div>
+</footer>
+<div class="essential">
+    <div class="imagem">
+        <img src="imagens/DivinaLogo.png" alt="divina" width="400px">
+    </div>
+    <div class="header-content">
+
+        <a href="registroPlantas.php"><button class="submit" onclick="registroPlantas()">Adicionar
+                Produto</button></a>
+
+        <a href="clientes.php"><button class="submit" onclick="clientes()">Adicionar
+                Cliente</button></a>
+
+        <a href="registroClientes.php"><button class="submit" onclick="registroClientes()">Adicionar
+                Venda</button></a>
+
+
+        <a href="ajusteDeProdutos.php"><button class="submit" onclick="ajusteDeprodutos()">Ajuste de
+                Produtos</button></a>
+
+        <a href="consultaProdutos.php"><button class="submit" onclick="consultaProdutos()">Tabela de
+                Produtos</button></a>
+
+        <div class="container">
+            <input id="nomeCliente" type="text" placeholder="Pesquisar Cliente">
+            <button id="buscarCliente" class="submit" onclick="buscarVendas()">Buscar</button>
+            <p id="mensagemErro" style="color: red; display: none;">O nome do cliente não foi inserido.</p>
+
+        </div>
+
+    </div>
+</div>
+
+<script>
+    function buscarVendas() {
+        var nomeCliente = document.getElementById("nomeCliente").value;
+        if (nomeCliente.trim() !== "") {
+            window.location.href = "buscarVendas.php?cliente=" + nomeCliente;
+        } else {
+            document.getElementById("mensagemErro").style.display = "block";
+        }
+    }
+</script>
+
+</div>
+</div>
+</div>
+
+</body>
+<footer>
+    <a>&copy; 2024 Floricultura Divina Planta</a>
+</footer>
+
+
+</html>
+
